@@ -1,3 +1,17 @@
 demo:
   name: "demo dev from github"
   version: "0.4 snapshot"
+server:
+  lena:
+    accesslog:
+      enabled: true
+    session:
+      enabled: true
+      primary-host: "lena-session-1.lena-session.dev.svc.cluster.local"
+      primary-port: 5180
+      secondary-host: "lena-session-0.lena-session.dev.svc.cluster.local"
+      secondary-port: 5180
+    stuckThread:
+      threshold: 50
+    connector:
+      uri-encoding: UTF-8
